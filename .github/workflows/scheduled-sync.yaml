@@ -13,12 +13,8 @@ jobs:
     steps:
       # https://github.com/actions/checkout
       - name: clone recursively
-        uses: actions/checkout@v4
-        with:
-          # token is required for `git push` in further steps
-          token: ${{ secrets.PAT }}
-          ssh-key: ${{ secrets.SSH_KEY }}
-          submodules: true
+        run: |
+          git clone --recursive git@github.com:hwakabh/gists.git
 
       - name: check changes on Gists
         id: diff
@@ -35,4 +31,5 @@ jobs:
           git config user.email hrykwkbys1024@gmail.com
           git add .
           git commit --message="chore: applied changes on Gist to repo."
+          git remote set-url origin https://${{ secrets.PAT }}@github.com/hwakabh/gists.git
           git push -f origin main
