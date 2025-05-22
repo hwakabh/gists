@@ -28,3 +28,6 @@
 [submodule "js/http-tiny-client"]
 	path = js/http-tiny-client
 	url = https://gist.github.com/f768bd377603d451f013e38ec3ffb19d.git
+[submodule "py/kot_selenium.py"]
+	path = py/kot_selenium.py
+	url = https://gist.github.com/073279627e424bc555e7804f68cc32d1.git
