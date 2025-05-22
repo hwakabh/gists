@@ -17,8 +17,8 @@ jobs:
         with:
           submodules: true
           token: ${{ secrets.PAT }}
-          ssh-key: ${{ secrets.SSH_KEY }}
-          ssh-strict: false
+          # ssh-key: ${{ secrets.SSH_KEY }}
+          # ssh-strict: false
 
       - name: check changes on Gists
         id: diff
