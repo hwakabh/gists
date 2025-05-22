@@ -1,0 +1,34 @@
+name: Sync Gists
+
+on:
+  schedule:
+    # Runs on 19:00 JST every day, note that cron syntax applied as UTC
+    - cron: '0 10 * * *'
+  workflow_dispatch:
+
+jobs:
+  sync-gists:
+    name: Sync changes on Gists
+    runs-on: ubuntu-24.04
+    steps:
+      - name: clone recursively
+        uses: actions/checkout@v4
+        with:
+          # token is required for `git push` in further steps
+          token: ${{ secret.PAT }}
+          submodules: true
+      - name: check changes on Gists
+        id: diff
+        run: |
+          git submodule update --remote
+          git diff --name-only --exit-code
+        continue-on-error: true
+      - name: commit and push changes to repo
+        if: steps.diff.outcome == 'failure'
+        run: |
+          set -x
+          git config user.name hwakabh
+          git config user.email hrykwkbys1024@gmail.com
+          git add .
+          git commit --message="chore: applied changes on Gist to repo."
+          git push -f origin main
