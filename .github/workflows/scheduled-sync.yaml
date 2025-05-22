@@ -11,18 +11,18 @@ jobs:
     name: Sync changes on Gists
     runs-on: ubuntu-24.04
     steps:
+      # https://github.com/actions/checkout
       - name: clone recursively
-        uses: actions/checkout@v4
-        with:
-          # token is required for `git push` in further steps
-          token: ${{ secret.PAT }}
-          submodules: true
+        run: |
+          git clone --recursive https://${{ secrets.PAT }}@github.com/hwakabh/gists.git
+
       - name: check changes on Gists
         id: diff
         run: |
           git submodule update --remote
           git diff --name-only --exit-code
         continue-on-error: true
+
       - name: commit and push changes to repo
         if: steps.diff.outcome == 'failure'
         run: |
@@ -31,4 +31,5 @@ jobs:
           git config user.email hrykwkbys1024@gmail.com
           git add .
           git commit --message="chore: applied changes on Gist to repo."
+          git remote set-url origin https://${{ secrets.PAT }}@github.com/hwakabh/gists.git
           git push -f origin main
