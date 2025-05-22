@@ -31,4 +31,4 @@ jobs:
           git config user.email hrykwkbys1024@gmail.com
           git add .
           git commit --message="chore: applied changes on Gist to repo."
-          git push origin main
+          git push -f origin main
