@@ -18,6 +18,7 @@ jobs:
 
       - name: check changes on Gists
         id: diff
+        working-directory: gists
         run: |
           git submodule update --remote
           git diff --name-only --exit-code
@@ -25,6 +26,7 @@ jobs:
 
       - name: commit and push changes to repo
         if: steps.diff.outcome == 'failure'
+        working-directory: gists
         run: |
           set -x
           git config user.name hwakabh
