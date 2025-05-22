@@ -14,7 +14,7 @@ jobs:
       # https://github.com/actions/checkout
       - name: clone recursively
         run: |
-          git clone --recursive git@github.com:hwakabh/gists.git
+          git clone --recursive https://github.com/hwakabh/gists.git
 
       - name: check changes on Gists
         id: diff
