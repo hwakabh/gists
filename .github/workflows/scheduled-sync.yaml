@@ -13,8 +13,10 @@ jobs:
     steps:
       # https://github.com/actions/checkout
       - name: clone recursively
-        run: |
-          git clone --recursive https://github.com/hwakabh/gists.git
+        uses: actions/checkout@v4
+        with:
+          submodules: 'recursive'
+          ssh-key: ${{ secrets.SSH_KEY }}
 
       - name: check changes on Gists
         id: diff
