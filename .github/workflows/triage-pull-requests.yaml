@@ -15,9 +15,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Assign author to PR
-        if: github.event.action == 'opened'
-        uses: technote-space/assign-author@v1.6.2
+      # - name: Assign author to PR
+      #   if: github.event.action == 'opened'
+      #   uses: technote-space/assign-author@v1.6.2
 
       - name: Label to PR
         uses: actions/labeler@v5
