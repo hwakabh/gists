@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           # token is required for `git push` in further steps
-          token: ${{ secret.PAT }}
+          token: ${{ secrets.PAT }}
           submodules: true
       - name: check changes on Gists
         id: diff
