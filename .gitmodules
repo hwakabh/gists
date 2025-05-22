@@ -1,30 +1,30 @@
 [submodule "py/bs4_image_downloader"]
 	path = py/bs4_image_downloader
-	url = git@gist.github.com:467f84af99f89aeda3c352b279c64783.git
+	url = https://gist.github.com/467f84af99f89aeda3c352b279c64783.git
 [submodule "py/translate_client_googleapis"]
 	path = py/translate_client_googleapis
-	url = git@gist.github.com:702dd853b045eafb37a21b6de0737d63.git
+	url = https://gist.github.com/702dd853b045eafb37a21b6de0737d63.git
 [submodule "py/translate_client_deeplapis"]
 	path = py/translate_client_deeplapis
-	url = git@gist.github.com:dd674267af09a7d702eb69ed32502a54.git
+	url = https://gist.github.com/dd674267af09a7d702eb69ed32502a54.git
 [submodule "py/selenium_cafe_migrations"]
 	path = py/selenium_cafe_migrations
-	url = git@gist.github.com:db56c2d9038535d8c228a5874b058355.git
+	url = https://gist.github.com/db56c2d9038535d8c228a5874b058355.git
 [submodule "rb/hello_sonic_pi"]
 	path = rb/hello_sonic_pi
-	url = git@gist.github.com:2b043870efb765a7443e3c36da63dd0f.git
+	url = https://gist.github.com/2b043870efb765a7443e3c36da63dd0f.git
 [submodule "gs/slackhooks-world-holidays"]
 	path = gs/slackhooks-world-holidays
-	url = git@gist.github.com:aae9bccd36d63519078c7f02c7cf0082.git
+	url = https://gist.github.com/aae9bccd36d63519078c7f02c7cf0082.git
 [submodule "sh/centos_docker_install"]
 	path = sh/centos_docker_install
-	url = git@gist.github.com:dbc8252e7f88d71226990be4b252d712.git
+	url = https://gist.github.com/dbc8252e7f88d71226990be4b252d712.git
 [submodule "sh/centos_clivm_setup"]
 	path = sh/centos_clivm_setup
-	url = git@gist.github.com:de045e80cadd7e2e43fbe6caf8b5ea61.git
+	url = https://gist.github.com/de045e80cadd7e2e43fbe6caf8b5ea61.git
 [submodule "sh/gitlab_scheduled_backups"]
 	path = sh/gitlab_scheduled_backups
-	url = git@gist.github.com:4cf2d5d959ec2aca26990033efe634c3.git
+	url = https://gist.github.com/4cf2d5d959ec2aca26990033efe634c3.git
 [submodule "js/http-tiny-client"]
 	path = js/http-tiny-client
-	url = git@gist.github.com:f768bd377603d451f013e38ec3ffb19d.git
+	url = https://gist.github.com/f768bd377603d451f013e38ec3ffb19d.git
